@@ -1,0 +1,10 @@
+.btnEdit{
+  margin-right: 15px;
+}
+.btnEdit:hover{
+  transform: scale(1.3);
+  transition: 0.5s;
+}
+.btnGroup{
+  margin-left: 180px;
+}

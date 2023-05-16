@@ -1,0 +1,107 @@
+.btnEdit{
+  margin-right: 15px;
+}
+.btnEdit:hover{
+  transform: scale(1.3);
+  transition: 0.5s;
+}
+.btnGroup{
+  margin-left: 180px;
+}
+
+.searchCustomer :hover{
+  border-radius: 15px;
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+/*.search-box{*/
+/*  background: black;*/
+/*  width: 70px;*/
+/*  height: 70px;*/
+/*  overflow: hidden;*/
+/*  position: relative;*/
+/*  border-radius: 15px;*/
+/*  transition: all 0.5s ease;*/
+
+/*}*/
+/*.search-box input{*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  background: transparent;*/
+/*  color: white;*/
+/*  padding: 20px 100px 20px 20px;*/
+/*  font-size: 35px;*/
+/*  outline: none;*/
+
+
+/*}*/
+/*.search-box__btn{*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  right: 0;*/
+/*  width: 70px;*/
+/*  height: 70px;*/
+/*  font-size:25px;*/
+/*  border: none;*/
+/*  outline: none;*/
+/*}*/
+/*.search-box.open{*/
+/*  width: 400px;*/
+/*}*/
+/* 12 */
+.btn-12{
+  position: relative;
+  right: 20px;
+  bottom: 20px;
+  border:none;
+  box-shadow: none;
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  -webkit-perspective: 230px;
+  perspective: 230px;
+}
+.btn-12 span {
+  background: rgb(0,172,238);
+  background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+  display: block;
+  position: absolute;
+  width: 130px;
+  height: 40px;
+  border-radius: 5px;
+  margin:0;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.btn-12 span:nth-child(1) {
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-12 span:nth-child(2) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-12:hover span:nth-child(1) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+.btn-12:hover span:nth-child(2) {
+  color: transparent;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+}
+

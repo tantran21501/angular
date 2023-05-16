@@ -1,0 +1,88 @@
+<div class="row">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-2">
+        <a class="nav-link">
+          <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#mdCreate">
+            <i class="far fa-plus-square"></i> Add Contract Detail
+          </button>
+        </a>
+      </div>
+      <div class="col-8 text-center">
+      </div>
+      <div class="col-2 text-right">
+        <a class="nav-link">
+          <button type="button" class="btn btn-outline-primary"
+                  data-toggle="modal" data-target="#mdSearch">Search <i class="fas fa-search"></i>
+          </button>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <table class="table table-striped table-inverse table-responsive"
+             style="display: inline-block; width: 100%; overflow-x: auto">
+        <thead class="thead-inverse">
+        <tr>
+          <th>ID</th>
+          <th>Contract</th>
+          <th>Attach Service</th>
+          <th>Quantity</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let contractDetail of contractDetailList | paginate: { itemsPerPage: 10, currentPage: p };index as i">
+          <td>{{contractDetail.id}}</td>
+          <td>{{contractDetail.contract.id}}</td>
+          <td>{{contractDetail.attachService.name}}</td>
+          <td>{{contractDetail.quantity}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="row">
+      <div class="col-6">
+      </div>
+      <div class="col-6 text-right">
+
+      </div>
+    </div>
+  </div>
+</div>
+<!--buton Paging-->
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
+<!-- Modal Create -->
+<div class="modal fade" id="mdCreate" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" style="color:dodgerblue"><span>Add New Customer</span></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="contractDetailForm">
+          <div>Contract</div>
+          <select formControlName="contract" class="form-control">
+            <option value="">--</option>
+            <option *ngFor="let contract of contractList" [ngValue]="contract">{{contract.id}}</option>
+          </select>
+          <div>Attach Service</div>
+          <select formControlName="attachService" class="form-control">
+            <option value="">--</option>
+            <option *ngFor="let attachService of attachServiceList" [ngValue]="attachService">{{attachService.name}}</option>
+          </select>
+          <div>Quantity</div>
+          <input class="form-control" type="number" formControlName="quantity">
+          <br>
+          <div class="btnGroup">
+            <button type="button" class="btn btnEdit btn-secondary" data-dismiss="modal">Close</button>
+            <button (click)="createContractDetail()" [disabled]="!contractDetailForm.valid" data-dismiss="modal" type="button"
+                    class="btnEdit btn btn-primary">Create
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

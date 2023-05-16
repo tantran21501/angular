@@ -1,0 +1,1297 @@
+{
+  "typeList": [
+    {
+      "id": 1,
+      "type": "Diamond"
+    },
+    {
+      "id": 2,
+      "type": "Platinium"
+    },
+    {
+      "id": 3,
+      "type": "Gold"
+    },
+    {
+      "id": 4,
+      "type": "Silver"
+    },
+    {
+      "id": 5,
+      "type": "Member"
+    }
+  ],
+  "rentTypeList": [
+    {
+      "id": 1,
+      "name": "Villa",
+      "price": 500000
+    },
+    {
+      "id": 2,
+      "name": "House",
+      "price": 300000
+    },
+    {
+      "id": 3,
+      "name": "Room",
+      "price": 100000
+    }
+  ],
+  "positionList": [
+    {
+      "id": 1,
+      "name": "Receptionists"
+    },
+    {
+      "id": 2,
+      "name": "Staff"
+    },
+    {
+      "id": 3,
+      "name": "Expert"
+    },
+    {
+      "id": 4,
+      "name": "Monitor"
+    },
+    {
+      "id": 5,
+      "name": "Manager"
+    },
+    {
+      "id": 6,
+      "name": "President"
+    }
+  ],
+  "divisionList": [
+    {
+      "id": 1,
+      "name": "Sale-Marketing"
+    },
+    {
+      "id": 2,
+      "name": "Administrative"
+    },
+    {
+      "id": 3,
+      "name": "Service"
+    },
+    {
+      "id": 4,
+      "name": "Managerment"
+    }
+  ],
+  "employeeList": [
+    {
+      "id": 1,
+      "code": "NV-0001",
+      "name": "Nguyễn An",
+      "position": {
+        "id": 1,
+        "name": "Receptionists"
+      },
+      "education": {
+        "id": 1,
+        "name": "Intermediate"
+      },
+      "division": {
+        "id": 3,
+        "name": "Service"
+      },
+      "birthday": "2021-12-08",
+      "idCard": "201605423",
+      "salary": 5555,
+      "phone": "0947829245",
+      "email": "đâsda",
+      "address": "fasfasda"
+    },
+    {
+      "id": 2,
+      "code": "NV-0002",
+      "name": "Nguyễn Bình",
+      "birthday": "2021-12-08",
+      "salary": 5555,
+      "phone": "0947829245",
+      "idCard": "201605423",
+      "email": "đâsda",
+      "address": "fasfasda",
+      "position": {
+        "id": 2,
+        "name": "Staff"
+      },
+      "division": {
+        "id": 1,
+        "name": "Sale-Marketing"
+      },
+      "education": {
+        "id": 1,
+        "name": "Intermediate"
+      }
+    },
+    {
+      "id": 5,
+      "code": "ád",
+      "name": "ádasdas",
+      "birthday": "2021-12-02",
+      "salary": 24,
+      "phone": "234234",
+      "idCard": "234234",
+      "email": "234",
+      "address": "23423",
+      "position": {
+        "id": 1,
+        "name": "Receptionists"
+      },
+      "division": {
+        "id": 2,
+        "name": "Administrative"
+      },
+      "education": {
+        "id": 3,
+        "name": "University"
+      }
+    },
+    {
+      "id": 6,
+      "code": "",
+      "name": "",
+      "birthday": "2021-12-02",
+      "salary": "",
+      "phone": "",
+      "idCard": "",
+      "email": "",
+      "address": "",
+      "position": "",
+      "division": "",
+      "education": ""
+    },
+    {
+      "id": 7,
+      "code": "",
+      "name": "",
+      "birthday": "",
+      "salary": "",
+      "phone": "",
+      "idCard": "",
+      "email": "",
+      "address": "",
+      "position": "",
+      "division": "",
+      "education": {
+        "id": 3,
+        "name": "University"
+      }
+    },
+    {
+      "id": 10,
+      "code": "",
+      "name": "",
+      "birthday": "",
+      "salary": "",
+      "phone": "",
+      "idCard": "",
+      "email": "",
+      "address": "",
+      "position": "",
+      "division": "",
+      "education": {
+        "id": 3,
+        "name": "University"
+      }
+    },
+    {
+      "id": 11,
+      "code": "",
+      "name": "",
+      "birthday": "",
+      "salary": "",
+      "phone": "",
+      "idCard": "",
+      "email": "",
+      "address": "",
+      "position": "",
+      "division": "",
+      "education": {
+        "id": 3,
+        "name": "University"
+      }
+    }
+  ],
+  "educationList": [
+    {
+      "id": 1,
+      "name": "Intermediate"
+    },
+    {
+      "id": 2,
+      "name": "College"
+    },
+    {
+      "id": 3,
+      "name": "University"
+    },
+    {
+      "id": 4,
+      "name": "Postgraduate"
+    }
+  ],
+  "attachServiceList": [
+    {
+      "id": 1,
+      "name": "Massage",
+      "price": "500000",
+      "unit": 1,
+      "status": 1
+    },
+    {
+      "id": 2,
+      "name": "Karaoke",
+      "price": "400000",
+      "unit": 1,
+      "status": 0
+    },
+    {
+      "id": 3,
+      "name": "Food",
+      "price": "300000",
+      "unit": 1,
+      "status": 1
+    },
+    {
+      "id": 4,
+      "name": "Water",
+      "price": "200000",
+      "unit": 1,
+      "status": 1
+    },
+    {
+      "id": 5,
+      "name": "Rent Car",
+      "price": "100000",
+      "unit": 1,
+      "status": 0
+    }
+  ],
+  "contractDetailList": [
+    {
+      "id": 1,
+      "contract": {
+        "id": 1,
+        "customer": {
+          "id": 1,
+          "code": "KH-0001",
+          "type": {
+            "id": 3,
+            "type": "Gold"
+          },
+          "name": "Lê Bình Bình",
+          "birthday": "2000-02-02",
+          "idCard": "201605626",
+          "phone": "0947829245",
+          "email": "tan@gmail.com",
+          "address": "Da Nangvcxvxc"
+        },
+        "employee": {
+          "id": 2,
+          "code": "NV-0002",
+          "name": "Nguyễn Bình",
+          "birthday": "2021-12-08",
+          "salary": 5555,
+          "phone": "0947829245",
+          "idCard": "201605423",
+          "email": "đâsda",
+          "address": "fasfasda",
+          "position": {
+            "id": 2,
+            "name": "Staff"
+          },
+          "division": {
+            "id": 1,
+            "name": "Sale-Marketing"
+          },
+          "education": {
+            "id": 1,
+            "name": "Intermediate"
+          }
+        },
+        "service": {
+          "id": 5,
+          "code": "123",
+          "name": "12312",
+          "area": 3112,
+          "numberFloor": 3123,
+          "maxPeople": "123123",
+          "cost": "123",
+          "rentType": {
+            "id": 1,
+            "name": "Villa",
+            "price": 500000
+          },
+          "status": "0"
+        },
+        "startDate": "",
+        "endDate": "",
+        "deposit": 500,
+        "total": ""
+      },
+      "attachService": {
+        "id": 1,
+        "name": "Massage",
+        "price": "500000",
+        "unit": 1,
+        "status": 1
+      },
+      "quantity": 5
+    },
+    {
+      "id": 2,
+      "contract": {
+        "id": 4,
+        "customer": {
+          "id": 1,
+          "code": "KH-0001",
+          "type": {
+            "id": 3,
+            "type": "Gold"
+          },
+          "name": "Nguyễn Hoàng Thắng",
+          "birthday": "2000-02-02",
+          "idCard": "201605626",
+          "phone": "0947829245",
+          "email": "tan@gmail.com",
+          "address": "Da Nangvcxvxc"
+        },
+        "employee": {
+          "id": 4,
+          "code": "NV-0001",
+          "name": "Nguyễn An",
+          "birthday": "2021-12-08",
+          "salary": 5555,
+          "phone": "0947829245",
+          "idCard": "201605423",
+          "email": "đâsda",
+          "address": "fasfasda423423",
+          "position": {
+            "id": 4,
+            "name": "Monitor"
+          },
+          "division": {
+            "id": 3,
+            "name": "Service"
+          },
+          "education": {
+            "id": 3,
+            "name": "University"
+          }
+        },
+        "service": {
+          "id": 7,
+          "code": "DV-0002",
+          "name": "House with Pool",
+          "area": 300,
+          "numberFloor": 2,
+          "maxPeople": "20",
+          "cost": "300000",
+          "rentType": {
+            "id": 2,
+            "name": "House",
+            "price": 300000
+          },
+          "status": "1"
+        },
+        "startDate": "2021-12-18",
+        "endDate": "2021-12-25",
+        "deposit": 500000,
+        "total": ""
+      },
+      "attachService": {
+        "id": 3,
+        "name": "Food",
+        "price": "300000",
+        "unit": 1,
+        "status": 1
+      },
+      "quantity": 5
+    },
+    {
+      "id": 3,
+      "contract": {
+        "id": 5,
+        "customer": {
+          "id": 2,
+          "code": "KH-0001",
+          "type": {
+            "id": 1,
+            "type": "Diamond"
+          },
+          "name": "Lê Bình",
+          "birthday": "2000-02-02",
+          "idCard": "201605626",
+          "phone": "0947829245",
+          "email": "tan@gmail.com",
+          "address": "Da Nangvcxvxc"
+        },
+        "employee": {
+          "id": 2,
+          "code": "NV-0002",
+          "name": "Nguyễn Bình",
+          "birthday": "2021-12-08",
+          "salary": 5555,
+          "phone": "0947829245",
+          "idCard": "201605423",
+          "email": "đâsda",
+          "address": "fasfasda",
+          "position": {
+            "id": 2,
+            "name": "Staff"
+          },
+          "division": {
+            "id": 1,
+            "name": "Sale-Marketing"
+          },
+          "education": {
+            "id": 1,
+            "name": "Intermediate"
+          }
+        },
+        "service": {
+          "id": 7,
+          "code": "DV-0002",
+          "name": "House with Pool",
+          "area": 300,
+          "numberFloor": 2,
+          "maxPeople": "20",
+          "cost": "300000",
+          "rentType": {
+            "id": 2,
+            "name": "House",
+            "price": 300000
+          },
+          "status": "1"
+        },
+        "startDate": "2021-12-02",
+        "endDate": "2021-12-31",
+        "deposit": 500,
+        "total": "300000900000"
+      },
+      "attachService": {
+        "id": 3,
+        "name": "Food",
+        "price": "300000",
+        "unit": 1,
+        "status": 1
+      },
+      "quantity": 3
+    },
+    {
+      "id": 4,
+      "contract": {
+        "id": 5,
+        "customer": {
+          "id": 2,
+          "code": "KH-0001",
+          "type": {
+            "id": 1,
+            "type": "Diamond"
+          },
+          "name": "Lê Bình",
+          "birthday": "2000-02-02",
+          "idCard": "201605626",
+          "phone": "0947829245",
+          "email": "tan@gmail.com",
+          "address": "Da Nangvcxvxc"
+        },
+        "employee": {
+          "id": 2,
+          "code": "NV-0002",
+          "name": "Nguyễn Bình",
+          "birthday": "2021-12-08",
+          "salary": 5555,
+          "phone": "0947829245",
+          "idCard": "201605423",
+          "email": "đâsda",
+          "address": "fasfasda",
+          "position": {
+            "id": 2,
+            "name": "Staff"
+          },
+          "division": {
+            "id": 1,
+            "name": "Sale-Marketing"
+          },
+          "education": {
+            "id": 1,
+            "name": "Intermediate"
+          }
+        },
+        "service": {
+          "id": 7,
+          "code": "DV-0002",
+          "name": "House with Pool",
+          "area": 300,
+          "numberFloor": 2,
+          "maxPeople": "20",
+          "cost": "300000",
+          "rentType": {
+            "id": 2,
+            "name": "House",
+            "price": 300000
+          },
+          "status": "1"
+        },
+        "startDate": "2021-12-02",
+        "endDate": "2021-12-31",
+        "deposit": 500,
+        "total": "300000900000"
+      },
+      "attachService": {
+        "id": 3,
+        "name": "Food",
+        "price": "300000",
+        "unit": 1,
+        "status": 1
+      },
+      "quantity": 3
+    },
+    {
+      "id": 5,
+      "contract": {
+        "id": 5,
+        "customer": {
+          "id": 2,
+          "code": "KH-0001",
+          "type": {
+            "id": 1,
+            "type": "Diamond"
+          },
+          "name": "Lê Bình",
+          "birthday": "2000-02-02",
+          "idCard": "201605626",
+          "phone": "0947829245",
+          "email": "tan@gmail.com",
+          "address": "Da Nangvcxvxc"
+        },
+        "employee": {
+          "id": 2,
+          "code": "NV-0002",
+          "name": "Nguyễn Bình",
+          "birthday": "2021-12-08",
+          "salary": 5555,
+          "phone": "0947829245",
+          "idCard": "201605423",
+          "email": "đâsda",
+          "address": "fasfasda",
+          "position": {
+            "id": 2,
+            "name": "Staff"
+          },
+          "division": {
+            "id": 1,
+            "name": "Sale-Marketing"
+          },
+          "education": {
+            "id": 1,
+            "name": "Intermediate"
+          }
+        },
+        "service": {
+          "id": 7,
+          "code": "DV-0002",
+          "name": "House with Pool",
+          "area": 300,
+          "numberFloor": 2,
+          "maxPeople": "20",
+          "cost": "300000",
+          "rentType": {
+            "id": 2,
+            "name": "House",
+            "price": 300000
+          },
+          "status": "1"
+        },
+        "startDate": "2021-12-02",
+        "endDate": "2021-12-31",
+        "deposit": 500,
+        "total": "300000900000"
+      },
+      "attachService": {
+        "id": 3,
+        "name": "Food",
+        "price": "300000",
+        "unit": 1,
+        "status": 1
+      },
+      "quantity": 3
+    },
+    {
+      "id": 6,
+      "contract": {
+        "id": 5,
+        "customer": {
+          "id": 2,
+          "code": "KH-0001",
+          "type": {
+            "id": 1,
+            "type": "Diamond"
+          },
+          "name": "Lê Bình",
+          "birthday": "2000-02-02",
+          "idCard": "201605626",
+          "phone": "0947829245",
+          "email": "tan@gmail.com",
+          "address": "Da Nangvcxvxc"
+        },
+        "employee": {
+          "id": 2,
+          "code": "NV-0002",
+          "name": "Nguyễn Bình",
+          "birthday": "2021-12-08",
+          "salary": 5555,
+          "phone": "0947829245",
+          "idCard": "201605423",
+          "email": "đâsda",
+          "address": "fasfasda",
+          "position": {
+            "id": 2,
+            "name": "Staff"
+          },
+          "division": {
+            "id": 1,
+            "name": "Sale-Marketing"
+          },
+          "education": {
+            "id": 1,
+            "name": "Intermediate"
+          }
+        },
+        "service": {
+          "id": 7,
+          "code": "DV-0002",
+          "name": "House with Pool",
+          "area": 300,
+          "numberFloor": 2,
+          "maxPeople": "20",
+          "cost": "300000",
+          "rentType": {
+            "id": 2,
+            "name": "House",
+            "price": 300000
+          },
+          "status": "1"
+        },
+        "startDate": "2021-12-02",
+        "endDate": "2021-12-31",
+        "deposit": 500,
+        "total": "3000001200000"
+      },
+      "attachService": {
+        "id": 2,
+        "name": "Karaoke",
+        "price": "400000",
+        "unit": 1,
+        "status": 0
+      },
+      "quantity": 3
+    },
+    {
+      "id": 7,
+      "contract": {
+        "id": 4,
+        "customer": {
+          "id": 1,
+          "code": "KH-0001",
+          "type": {
+            "id": 3,
+            "type": "Gold"
+          },
+          "name": "Nguyễn Hoàng Thắng",
+          "birthday": "2000-02-02",
+          "idCard": "201605626",
+          "phone": "0947829245",
+          "email": "tan@gmail.com",
+          "address": "Da Nangvcxvxc"
+        },
+        "employee": {
+          "id": 4,
+          "code": "NV-0001",
+          "name": "Nguyễn An",
+          "birthday": "2021-12-08",
+          "salary": 5555,
+          "phone": "0947829245",
+          "idCard": "201605423",
+          "email": "đâsda",
+          "address": "fasfasda423423",
+          "position": {
+            "id": 4,
+            "name": "Monitor"
+          },
+          "division": {
+            "id": 3,
+            "name": "Service"
+          },
+          "education": {
+            "id": 3,
+            "name": "University"
+          }
+        },
+        "service": {
+          "id": 7,
+          "code": "DV-0002",
+          "name": "House with Pool",
+          "area": 300,
+          "numberFloor": 2,
+          "maxPeople": "20",
+          "cost": "300000",
+          "rentType": {
+            "id": 2,
+            "name": "House",
+            "price": 300000
+          },
+          "status": "1"
+        },
+        "startDate": "2021-12-18",
+        "endDate": "2021-12-25",
+        "deposit": 500000,
+        "total": "1500000"
+      },
+      "attachService": {
+        "id": 1,
+        "name": "Massage",
+        "price": "500000",
+        "unit": 1,
+        "status": 1
+      },
+      "quantity": 3
+    },
+    {
+      "id": 8,
+      "contract": {
+        "id": 1,
+        "customer": {
+          "id": 1,
+          "code": "KH-0001",
+          "type": {
+            "id": 3,
+            "type": "Gold"
+          },
+          "name": "Lê Bình Bình",
+          "birthday": "2000-02-02",
+          "idCard": "201605626",
+          "phone": "0947829245",
+          "email": "tan@gmail.com",
+          "address": "Da Nangvcxvxc"
+        },
+        "employee": {
+          "id": 2,
+          "code": "NV-0002",
+          "name": "Nguyễn Bình",
+          "birthday": "2021-12-08",
+          "salary": 5555,
+          "phone": "0947829245",
+          "idCard": "201605423",
+          "email": "đâsda",
+          "address": "fasfasda",
+          "position": {
+            "id": 2,
+            "name": "Staff"
+          },
+          "division": {
+            "id": 1,
+            "name": "Sale-Marketing"
+          },
+          "education": {
+            "id": 1,
+            "name": "Intermediate"
+          }
+        },
+        "service": {
+          "id": 5,
+          "code": "123",
+          "name": "12312",
+          "area": 3112,
+          "numberFloor": 3123,
+          "maxPeople": "123123",
+          "cost": "123",
+          "rentType": {
+            "id": 1,
+            "name": "Villa",
+            "price": 500000
+          },
+          "status": "0"
+        },
+        "startDate": "",
+        "endDate": "",
+        "deposit": 500,
+        "total": "11000000"
+      },
+      "attachService": {
+        "id": 1,
+        "name": "Massage",
+        "price": "500000",
+        "unit": 1,
+        "status": 1
+      },
+      "quantity": 22
+    },
+    {
+      "id": 9,
+      "contract": {
+        "id": 4,
+        "customer": {
+          "id": 1,
+          "code": "KH-0001",
+          "type": {
+            "id": 3,
+            "type": "Gold"
+          },
+          "name": "Nguyễn Hoàng Thắng",
+          "birthday": "2000-02-02",
+          "idCard": "201605626",
+          "phone": "0947829245",
+          "email": "tan@gmail.com",
+          "address": "Da Nangvcxvxc"
+        },
+        "employee": {
+          "id": 4,
+          "code": "NV-0001",
+          "name": "Nguyễn An",
+          "birthday": "2021-12-08",
+          "salary": 5555,
+          "phone": "0947829245",
+          "idCard": "201605423",
+          "email": "đâsda",
+          "address": "fasfasda423423",
+          "position": {
+            "id": 4,
+            "name": "Monitor"
+          },
+          "division": {
+            "id": 3,
+            "name": "Service"
+          },
+          "education": {
+            "id": 3,
+            "name": "University"
+          }
+        },
+        "service": {
+          "id": 7,
+          "code": "DV-0002",
+          "name": "House with Pool",
+          "area": 300,
+          "numberFloor": 2,
+          "maxPeople": "20",
+          "cost": "300000",
+          "rentType": {
+            "id": 2,
+            "name": "House",
+            "price": 300000
+          },
+          "status": "1"
+        },
+        "startDate": "2021-12-18",
+        "endDate": "2021-12-25",
+        "deposit": 500000,
+        "total": "100000"
+      },
+      "attachService": {
+        "id": 5,
+        "name": "Rent Car",
+        "price": "100000",
+        "unit": 1,
+        "status": 0
+      },
+      "quantity": 90
+    },
+    {
+      "id": 10,
+      "contract": {
+        "id": 4,
+        "customer": {
+          "id": 1,
+          "code": "KH-0001",
+          "type": {
+            "id": 3,
+            "type": "Gold"
+          },
+          "name": "Nguyễn Hoàng Thắng",
+          "birthday": "2000-02-02",
+          "idCard": "201605626",
+          "phone": "0947829245",
+          "email": "tan@gmail.com",
+          "address": "Da Nangvcxvxc"
+        },
+        "employee": {
+          "id": 4,
+          "code": "NV-0001",
+          "name": "Nguyễn An",
+          "birthday": "2021-12-08",
+          "salary": 5555,
+          "phone": "0947829245",
+          "idCard": "201605423",
+          "email": "đâsda",
+          "address": "fasfasda423423",
+          "position": {
+            "id": 4,
+            "name": "Monitor"
+          },
+          "division": {
+            "id": 3,
+            "name": "Service"
+          },
+          "education": {
+            "id": 3,
+            "name": "University"
+          }
+        },
+        "service": {
+          "id": 7,
+          "code": "DV-0002",
+          "name": "House with Pool",
+          "area": 300,
+          "numberFloor": 2,
+          "maxPeople": "20",
+          "cost": "300000",
+          "rentType": {
+            "id": 2,
+            "name": "House",
+            "price": 300000
+          },
+          "status": "1"
+        },
+        "startDate": "2021-12-18",
+        "endDate": "2021-12-25",
+        "deposit": 500000,
+        "total": 1000000
+      },
+      "attachService": {
+        "id": 2,
+        "name": "Karaoke",
+        "price": "400000",
+        "unit": 1,
+        "status": 0
+      },
+      "quantity": 2
+    }
+  ],
+  "contractList": [
+    {
+      "id": 1,
+      "customer": {
+        "id": 1,
+        "code": "KH-0001",
+        "type": {
+          "id": 3,
+          "type": "Gold"
+        },
+        "name": "Lê Bình Bình",
+        "birthday": "2000-02-02",
+        "idCard": "201605626",
+        "phone": "0947829245",
+        "email": "tan@gmail.com",
+        "address": "Da Nangvcxvxc"
+      },
+      "employee": {
+        "id": 2,
+        "code": "NV-0002",
+        "name": "Nguyễn Bình",
+        "birthday": "2021-12-08",
+        "salary": 5555,
+        "phone": "0947829245",
+        "idCard": "201605423",
+        "email": "đâsda",
+        "address": "fasfasda",
+        "position": {
+          "id": 2,
+          "name": "Staff"
+        },
+        "division": {
+          "id": 1,
+          "name": "Sale-Marketing"
+        },
+        "education": {
+          "id": 1,
+          "name": "Intermediate"
+        }
+      },
+      "service": {
+        "id": 5,
+        "code": "123",
+        "name": "12312",
+        "area": 3112,
+        "numberFloor": 3123,
+        "maxPeople": "123123",
+        "cost": "123",
+        "rentType": {
+          "id": 1,
+          "name": "Villa",
+          "price": 500000
+        },
+        "status": "0"
+      },
+      "startDate": "",
+      "endDate": "",
+      "deposit": 500,
+      "total": "11000000"
+    },
+    {
+      "id": 2,
+      "customer": "",
+      "employee": "",
+      "service": "",
+      "startDate": "",
+      "endDate": "",
+      "deposit": "",
+      "total": ""
+    },
+    {
+      "id": 3,
+      "customer": "",
+      "employee": "",
+      "service": "",
+      "startDate": "2021-12-02",
+      "endDate": "2021-12-29",
+      "deposit": "",
+      "total": ""
+    },
+    {
+      "id": 4,
+      "customer": {
+        "id": 1,
+        "code": "KH-0001",
+        "type": {
+          "id": 3,
+          "type": "Gold"
+        },
+        "name": "Nguyễn Hoàng Thắng",
+        "birthday": "2000-02-02",
+        "idCard": "201605626",
+        "phone": "0947829245",
+        "email": "tan@gmail.com",
+        "address": "Da Nangvcxvxc"
+      },
+      "employee": {
+        "id": 4,
+        "code": "NV-0001",
+        "name": "Nguyễn An",
+        "birthday": "2021-12-08",
+        "salary": 5555,
+        "phone": "0947829245",
+        "idCard": "201605423",
+        "email": "đâsda",
+        "address": "fasfasda423423",
+        "position": {
+          "id": 4,
+          "name": "Monitor"
+        },
+        "division": {
+          "id": 3,
+          "name": "Service"
+        },
+        "education": {
+          "id": 3,
+          "name": "University"
+        }
+      },
+      "service": {
+        "id": 7,
+        "code": "DV-0002",
+        "name": "House with Pool",
+        "area": 300,
+        "numberFloor": 2,
+        "maxPeople": "20",
+        "cost": "300000",
+        "rentType": {
+          "id": 2,
+          "name": "House",
+          "price": 300000
+        },
+        "status": "1"
+      },
+      "startDate": "2021-12-18",
+      "endDate": "2021-12-25",
+      "deposit": 500000,
+      "total": 1000000
+    },
+    {
+      "id": 5,
+      "customer": {
+        "id": 2,
+        "code": "KH-0001",
+        "type": {
+          "id": 1,
+          "type": "Diamond"
+        },
+        "name": "Lê Bình",
+        "birthday": "2000-02-02",
+        "idCard": "201605626",
+        "phone": "0947829245",
+        "email": "tan@gmail.com",
+        "address": "Da Nangvcxvxc"
+      },
+      "employee": {
+        "id": 2,
+        "code": "NV-0002",
+        "name": "Nguyễn Bình",
+        "birthday": "2021-12-08",
+        "salary": 5555,
+        "phone": "0947829245",
+        "idCard": "201605423",
+        "email": "đâsda",
+        "address": "fasfasda",
+        "position": {
+          "id": 2,
+          "name": "Staff"
+        },
+        "division": {
+          "id": 1,
+          "name": "Sale-Marketing"
+        },
+        "education": {
+          "id": 1,
+          "name": "Intermediate"
+        }
+      },
+      "service": {
+        "id": 7,
+        "code": "DV-0002",
+        "name": "House with Pool",
+        "area": 300,
+        "numberFloor": 2,
+        "maxPeople": "20",
+        "cost": "300000",
+        "rentType": {
+          "id": 2,
+          "name": "House",
+          "price": 300000
+        },
+        "status": "1"
+      },
+      "startDate": "2021-12-02",
+      "endDate": "2021-12-31",
+      "deposit": 500,
+      "total": "100000"
+    }
+  ],
+  "serviceList": [
+    {
+      "id": 5,
+      "code": "123",
+      "name": "12312",
+      "area": 3112,
+      "numberFloor": 3123,
+      "maxPeople": "123123",
+      "cost": "123",
+      "rentType": {
+        "id": 1,
+        "name": "Villa",
+        "price": 500000
+      },
+      "status": "0"
+    },
+    {
+      "id": 6,
+      "code": "DV-0001",
+      "name": "Villa VIP",
+      "area": 500,
+      "numberFloor": 3,
+      "maxPeople": "25",
+      "cost": "500000",
+      "rentType": {
+        "id": 1,
+        "name": "Villa",
+        "price": 500000
+      },
+      "status": "1"
+    },
+    {
+      "id": 7,
+      "code": "DV-0002",
+      "name": "House with Pool",
+      "area": 300,
+      "numberFloor": 2,
+      "maxPeople": "20",
+      "cost": "300000",
+      "rentType": {
+        "id": 2,
+        "name": "House",
+        "price": 300000
+      },
+      "status": "1"
+    },
+    {
+      "id": 8,
+      "code": "DV-0003",
+      "name": "Room",
+      "area": 150,
+      "numberFloor": 1,
+      "maxPeople": "5",
+      "cost": "100000",
+      "rentType": {
+        "id": 3,
+        "name": "Room",
+        "price": 100000
+      },
+      "status": "0"
+    }
+  ],
+  "customerList": [
+    {
+      "id": 1,
+      "code": "KH-0001",
+      "type": {
+        "id": 1,
+        "type": "Diamond"
+      },
+      "name": "Lê Bình",
+      "birthday": "2000-02-02",
+      "idCard": "201605626",
+      "phone": "0947829245",
+      "email": "tan@gmail.com",
+      "address": "Da Nangvcxvxc"
+    },
+    {
+      "id": 2,
+      "code": "KH-0001",
+      "type": {
+        "id": 1,
+        "type": "Diamond"
+      },
+      "name": "Lê Bình",
+      "birthday": "2000-02-02",
+      "idCard": "201605626",
+      "phone": "0947829245",
+      "email": "tan@gmail.com",
+      "address": "Da Nangvcxvxc"
+    },
+    {
+      "id": 3,
+      "code": "KH-0001",
+      "type": {
+        "id": 1,
+        "type": "Diamond"
+      },
+      "name": "Lê Bình",
+      "birthday": "2000-02-02",
+      "idCard": "201605626",
+      "phone": "0947829245",
+      "email": "tan@gmail.com",
+      "address": "Da Nangvcxvxc"
+    },
+    {
+      "id": 4,
+      "code": "KH-0001",
+      "type": {
+        "id": 1,
+        "type": "Diamond"
+      },
+      "name": "Lê Bình",
+      "birthday": "2000-02-02",
+      "idCard": "201605626",
+      "phone": "0947829245",
+      "email": "tan@gmail.com",
+      "address": "Da Nangvcxvxc"
+    }
+  ]
+}

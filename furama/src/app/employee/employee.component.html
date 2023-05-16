@@ -1,0 +1,413 @@
+<div class="row">
+  <div class="col-2" style="height: 560px">
+    <a class="nav-link">
+    <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#mdCreate">
+      <i class="far fa-plus-square"></i> Add Employee
+    </button>
+    </a>
+  </div>
+  <div class="col-10">
+    <div class="row">
+      <div class="col-12">
+        <div class="row">
+          <div class="col-2">
+            <a class="nav-link">
+              <button type="button" class="btn btn-outline-primary"
+                      data-toggle="modal" data-target="#mdSearch">Search <i class="fas fa-search"></i>
+              </button>
+            </a>
+          </div>
+          <div class="col-8 text-center">
+            <!--        <span class="text-success" th:if="${success}" th:text="${success}"></span>-->
+          </div>
+          <div class="col-2 text-right">
+            <a class="nav-link">
+              <!-- Button trigger modal Create New Customer -->
+
+              <button type="button" class="btn btn-outline-danger"
+                      (click)="check()">Delete<i class="fas fa-trash-restore"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <table class="table table-striped table-inverse table-responsive"
+                 style="display: inline-block; width: 100%; overflow-x: auto">
+            <thead class="thead-inverse">
+            <tr>
+
+              <th>ID</th>
+              <th>Name</th>
+              <th>Birthday</th>
+              <th>Salary</th>
+              <th>ID Card</th>
+              <th>Phone</th>
+              <th>Email</th>
+              <th>Address</th>
+              <th>Position</th>
+              <th>Division</th>
+              <th>Education</th>
+              <th>Edit</th>
+              <!--          <th>Delete</th>-->
+                        <th *ngIf="numberCheck">Select</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let emp of employeeList| paginate: { itemsPerPage: 4, currentPage: p };index as i">
+              <td>{{emp.code}}</td>
+              <td>{{emp.name}}</td>
+              <td>{{emp.birthday}}</td>
+              <td>{{emp.salary}}</td>
+              <td>{{emp.idCard}}</td>
+              <td>{{emp.phone}}</td>
+              <td>{{emp.email}}</td>
+              <td>{{emp.address}}</td>
+              <td>{{emp.position.name}}</td>
+              <td>{{emp.division.name}}</td>
+              <td>{{emp.education.name}}</td>
+              <td>
+                <a>
+                  <!-- Button trigger modal Edit -->
+                  <button value="{{emp.id}}" #idEdit (click)="trackId(idEdit.value)" type="button"
+                          class="btn btn-outline-primary" data-toggle="modal" data-target="#mdEdit">
+                    Edit <i class="far fa-edit"></i>
+                  </button>
+                </a>
+              </td>
+              <td>
+                <!-- Button trigger modal Delete-->
+                <!--            <button value="{{emp.id}}" #idDel (click)="trackId(idDel.value)" type="button"-->
+                <!--                    class="btn btn-outline-danger" data-toggle="modal" data-target="#mdDel">-->
+                <!--              Delete <i class="fas fa-trash-alt"></i>-->
+                <!--            </button>-->
+                <input style="margin-left: 10px" *ngIf="numberCheck" type="checkbox" class="customerId"
+                       value="{{emp.id}}">
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+          </div>
+          <div class="col-6 text-right">
+            <a class="nav-link">
+              <button *ngIf="numberCheck" (click)="getAllId()" type="button" class="btn btn-outline-danger"
+                      data-toggle="modal" data-target="#mdDelAll">Delete All Selected Employee <i
+                class="fas fa-trash-alt"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Create -->
+<div class="modal fade" id="mdCreate" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" style="color:dodgerblue"><span>Add New Employee</span></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="employeeForm">
+          <div>Employee Code</div>
+          <input class="form-control" type="text" formControlName="code">
+          <div *ngIf="!code.valid && (code.dirty ||code.touched)">
+            <div style="color:red" [hidden]="!code.errors.required">Code is required</div>
+            <div style="color:red" [hidden]="!code.errors.pattern">Wrong format Code ( Ex: KH-XXXX)</div>
+          </div>
+          <div>Employee Name</div>
+          <input class="form-control" type="text" formControlName="name">
+          <div *ngIf="!name.valid && (name.dirty ||name.touched)">
+            <div style="color:red" [hidden]="!name.errors.required">Name is required</div>
+            <div style="color:red" [hidden]="!name.hasError('errorName')">Wrong format Name ( Ex: Nguyễn Văn An)</div>
+          </div>
+          <div>Date of Birth</div>
+          <input class="form-control" type="date" formControlName="birthday">
+          <div *ngIf="!birthday.valid && (birthday.pristine ||birthday.touched||birthday.dirty)">
+            <div style="color:red" [hidden]="!birthday.errors.required">Date of Birth is required</div>
+            <div style="color:red" [hidden]="!birthday.errors.pattern">Wrong format Date ( Ex: dd-mm-yyyy)</div>
+            <div style="color:red" [hidden]="!birthday.hasError('errorAge')">Age must be greater than 18 or less than
+              100 !
+            </div>
+          </div>
+          <div>Salary</div>
+          <input class="form-control" type="number" formControlName="salary">
+          <div *ngIf="!salary.valid && (salary.dirty ||salary.touched)">
+            <div style="color:red" [hidden]="!salary.errors.required">Salary is required !</div>
+            <div style="color:red" [hidden]="!salary.errors.pattern">Salary must be number !</div>
+            <div style="color:red" [hidden]="!salary.hasError('errorNumber')">Salary must be greater than 0 !</div>
+          </div>
+
+          <div>Phone Number</div>
+          <input class="form-control" type="text" formControlName="phone">
+          <div *ngIf="!phone.valid && (phone.dirty ||phone.touched)">
+            <div style="color:red" [hidden]="!phone.errors.required">Phone Number is required</div>
+            <div style="color:red" [hidden]="!phone.errors.pattern">Wrong format Number Phone ( Ex: 090-XXXX-XXX)</div>
+          </div>
+          <div>ID Card</div>
+          <input class="form-control" type="text" formControlName="idCard">
+          <div *ngIf="!idCard.valid && (idCard.dirty ||idCard.touched)">
+            <div style="color:red" [hidden]="!idCard.errors.required">ID Card is required</div>
+            <div style="color:red" [hidden]="!idCard.errors.pattern">Wrong format Id Card ( Ex: XXX-XXX-XXX)</div>
+          </div>
+          <div>Email</div>
+          <input class="form-control" type="text" formControlName="email">
+          <div *ngIf="!email.valid && (email.dirty ||email.touched)">
+            <div style="color:red" [hidden]="!email.errors.required">Email is required</div>
+            <div style="color:red" [hidden]="!email.errors.pattern">Wrong format email ( Ex: abcde@gmail.com,...)</div>
+          </div>
+          <div>Address</div>
+          <input class="form-control" type="text" formControlName="address"><br>
+          <div *ngIf="!address.valid && (address.dirty ||address.touched)">
+            <div style="color:red" [hidden]="!address.errors.required">Address is required</div>
+            <div style="color:red" [hidden]="!address.hasError('errorName')">Wrong format address</div>
+          </div>
+          <div>Position</div>
+          <select formControlName="position" class="form-control">
+            <option value="">--</option>
+            <option *ngFor="let pos of positionList" [ngValue]="pos">{{pos.name}}</option>
+          </select>
+          <div *ngIf="!position.valid && (position.dirty ||position.touched)">
+            <div style="color:red" [hidden]="!position.errors.required">Position is required</div>
+          </div>
+          <div>Division</div>
+          <select formControlName="division" class="form-control">
+            <option value="">--</option>
+            <option *ngFor="let division of divisionList" [ngValue]="division">{{division.name}}</option>
+          </select>
+          <div *ngIf="!division.valid && (division.dirty ||division.touched)">
+            <div style="color:red" [hidden]="!division.errors.required">Division is required</div>
+          </div>
+          <div>Education Degree</div>
+          <select formControlName="education" class="form-control">
+            <option value="">--</option>
+            <option *ngFor="let education of educationList" [ngValue]="education">{{education.name}}</option>
+          </select>
+          <div *ngIf="!education.valid && (education.dirty ||education.touched)">
+            <div style="color:red" [hidden]="!education.errors.required">Education Degree is required</div>
+          </div>
+          <br>
+          <div class="btnGroup">
+            <button type="button" class="btn btnEdit btn-secondary" data-dismiss="modal">Close</button>
+            <button (click)="createEmployee()" [disabled]="!employeeForm.valid" data-dismiss="modal" type="button"
+                    class="btnEdit btn btn-primary">Create
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Delete -->
+<div class="modal fade" id="mdDel" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-danger">Delete Employee</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span data-dismiss="modal" aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure to delete employee?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button (click)="deleteEmployee()" data-dismiss="modal" type="button" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Edit -->
+<div class="modal fade" id="mdEdit" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-primary">Edit Employee</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="empEditForm">
+          <div>Employee Code</div>
+          <input class="form-control" type="text" formControlName="code">
+          <div *ngIf="!codeEdit.valid && (codeEdit.pristine)">
+            <div style="color:red" [hidden]="!codeEdit.errors.required">Code is required</div>
+            <div style="color:red" [hidden]="!codeEdit.errors.pattern">Wrong format Code ( Ex: KH-XXXX)</div>
+          </div>
+          <div>Employee Name</div>
+          <input class="form-control" type="text" formControlName="name">
+          <div *ngIf="!nameEdit.valid && (nameEdit.pristine)">
+            <div style="color:red" [hidden]="!nameEdit.errors.required">Name is required</div>
+            <div style="color:red" [hidden]="!nameEdit.hasError('errorName')">Wrong format Name ( Ex: Nguyễn Văn An)
+            </div>
+          </div>
+          <div>Date of Birth</div>
+          <input class="form-control" type="date" formControlName="birthday">
+          <div *ngIf="!birthdayEdit.valid && (birthdayEdit.pristine ||birthdayEdit.touched||birthdayEdit.dirty)">
+            <div style="color:red" [hidden]="!birthdayEdit.errors.required">Date of Birth is required</div>
+            <div style="color:red" [hidden]="!birthdayEdit.errors.pattern">Wrong format Date ( Ex: dd-mm-yyyy)</div>
+            <div style="color:red" [hidden]="!birthdayEdit.hasError('errorAge')">Age must be greater than 18 or less
+              than 100 !
+            </div>
+          </div>
+          <div>Salary</div>
+          <input class="form-control" type="number" formControlName="salary">
+          <div *ngIf="!salaryEdit.valid && (salaryEdit.pristine ||salaryEdit.touched)">
+            <div style="color:red" [hidden]="!salaryEdit.errors.required">Salary is required !</div>
+            <div style="color:red" [hidden]="!salaryEdit.errors.pattern">Salary must be number !</div>
+            <div style="color:red" [hidden]="!salaryEdit.hasError('errorNumber')">Salary must be greater than 0 !</div>
+          </div>
+
+          <div>Phone Number</div>
+          <input class="form-control" type="text" formControlName="phone">
+          <div *ngIf="!phoneEdit.valid && (phoneEdit.pristine ||phoneEdit.touched)">
+            <div style="color:red" [hidden]="!phoneEdit.errors.required">Phone Number is required</div>
+            <div style="color:red" [hidden]="!phoneEdit.errors.pattern">Wrong format Number Phone ( Ex: 090-XXXX-XXX)
+            </div>
+          </div>
+          <div>ID Card</div>
+          <input class="form-control" type="text" formControlName="idCard">
+          <div *ngIf="!idCardEdit.valid && (idCardEdit.pristine ||idCardEdit.touched)">
+            <div style="color:red" [hidden]="!idCardEdit.errors.required">ID Card is required</div>
+            <div style="color:red" [hidden]="!idCardEdit.errors.pattern">Wrong format Id Card ( Ex: XXX-XXX-XXX)</div>
+          </div>
+          <div>Email</div>
+          <input class="form-control" type="text" formControlName="email">
+          <div *ngIf="!emailEdit.valid && (emailEdit.pristine ||emailEdit.touched)">
+            <div style="color:red" [hidden]="!emailEdit.errors.required">Email is required</div>
+            <div style="color:red" [hidden]="!emailEdit.errors.pattern">Wrong format email ( Ex: abcde@gmail.com,...)
+            </div>
+          </div>
+          <div>Address</div>
+          <input class="form-control" type="text" formControlName="address"><br>
+          <div *ngIf="!addressEdit.valid && (addressEdit.pristine ||addressEdit.touched)">
+            <div style="color:red" [hidden]="!addressEdit.errors.required">Address is required</div>
+            <div style="color:red" [hidden]="!addressEdit.hasError('errorName')">Wrong format address</div>
+          </div>
+          <div>Position</div>
+          <select formControlName="position" class="form-control" [compareWith]="comparePosition">
+            <option value="">--</option>
+            <option *ngFor="let pos of positionList" [ngValue]="pos">{{pos.name}}</option>
+          </select>
+          <div *ngIf="!positionEdit.valid && (positionEdit.pristine ||positionEdit.touched)">
+            <div style="color:red" [hidden]="!positionEdit.errors.required">Position is required</div>
+          </div>
+          <div>Division</div>
+          <select formControlName="division" class="form-control" [compareWith]="compareDivision">
+            <option value="">--</option>
+            <option *ngFor="let division of divisionList" [ngValue]="division">{{division.name}}</option>
+          </select>
+          <div *ngIf="!divisionEdit.valid && (divisionEdit.dirty ||divisionEdit.touched)">
+            <div style="color:red" [hidden]="!divisionEdit.errors.required">Division is required</div>
+          </div>
+          <div>Education Degree</div>
+          <select formControlName="education" class="form-control" [compareWith]="compareEducation">
+            <option value="">--</option>
+            <option *ngFor="let education of educationList" [ngValue]="education">{{education.name}}</option>
+          </select>
+          <div *ngIf="!educationEdit.valid && (educationEdit.pristine ||educationEdit.touched)">
+            <div style="color:red" [hidden]="!educationEdit.errors.required">Education Degree is required</div>
+          </div>
+          <div class="btnGroup">
+            <button type="button" class="btn btnEdit btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" (click)="updateEmployee()" data-dismiss="modal" [disabled]="!empEditForm.valid"
+                    class="btn btnEdit btn-primary">Edit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Search-->
+<div class="modal fade" id="mdSearch" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" style="color: #b6d4fe">Find Employee</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="empSearchForm">
+          <div>Employee Code</div>
+          <input class="form-control" type="text" formControlName="code">
+          <div>Employee Name</div>
+          <input class="form-control" type="text" formControlName="name">
+          <div>Date of Birth</div>
+          <input class="form-control" type="text" formControlName="birthday">
+          <div>Salary</div>
+          <input class="form-control" type="number" formControlName="salary">
+          <div>Phone Number</div>
+          <input class="form-control" type="text" formControlName="phone">
+          <div>ID Card</div>
+          <input class="form-control" type="text" formControlName="idCard">
+          <div>Email</div>
+          <input class="form-control" type="text" formControlName="email">
+          <div>Address</div>
+          <input class="form-control" type="text" formControlName="address"><br>
+          <div>Position</div>
+          <select formControlName="position" class="form-control" [compareWith]="comparePosition">
+            <option value="">--</option>
+            <option *ngFor="let pos of positionList" [ngValue]="pos">{{pos.name}}</option>
+          </select>
+          <div>Division</div>
+          <select formControlName="division" class="form-control" [compareWith]="compareDivision">
+            <option value="">--</option>
+            <option *ngFor="let division of divisionList" [ngValue]="division">{{division.name}}</option>
+          </select>
+          <div>Education Degree</div>
+          <select formControlName="education" class="form-control" [compareWith]="compareEducation">
+            <option value="">--</option>
+            <option *ngFor="let education of educationList" [ngValue]="education">{{education.name}}</option>
+          </select>
+          <br>
+          <div class="btnGroup">
+            <button type="button" class="btn btnEdit btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" (click)="search()" data-dismiss="modal"
+                    class="btn btnEdit btn-primary">Find
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Delete ALl-->
+<div class="modal fade" id="mdDelAll" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-danger">Delete All Employee</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure to delete all selected employee?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="clearArrayDel()" data-dismiss="modal">Close</button>
+        <button type="button" (click)="delAllEmployee()" class="btn btn-danger" data-dismiss="modal">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
